@@ -1,0 +1,15 @@
+# Build settings
+build --cxxopt='-std=c++17'
+build --enable_runfiles
+build --verbose_failures
+build --sandbox_debug
+build --experimental_convenience_symlinks=ignore
+
+# Remote cache (optional)
+# build --remote_cache=https://your-cache-url
+
+# Test settings
+test --test_output=errors
+
+# Use specific toolchain
+build --python_path=python3

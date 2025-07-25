@@ -1,0 +1,43 @@
+# Node
+node_modules/
+dist/
+.next/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+
+# Java / Gradle
+build/
+.gradle/
+*.class
+out/
+
+# Rust
+target/
+
+# Go
+bin/
+pkg/
+
+# Bazel
+bazel-*
+.bazelrc.user
+bazel-out/
+bazel-bin/
+bazel-testlogs/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Misc
+.env.local
+.env.*
+*.swp
+coverage/

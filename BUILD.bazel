@@ -1,0 +1,13 @@
+load("@bazel_skylib//rules:build_test.bzl", "build_test_suite")
+
+package(default_visibility = ["//visibility:public"])
+
+# Optional: Define entrypoints or aggregates
+build_test_suite(
+    name = "all_tests",
+    targets = [
+        "//apps/backend-services/java:all",
+        "//apps/backend-services/python:all",
+        "//libs/java-commons:all",
+    ],
+)
