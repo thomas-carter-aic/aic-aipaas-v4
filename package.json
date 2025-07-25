@@ -1,13 +1,46 @@
 {
-  "name": "aic-aipaas",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "aicp-platform",
+  "version": "0.1.0",
+  "description": "Advanced Intelligent Computing Platform",
+  "private": true,
+  "workspaces": [
+    "frontends/*",
+    "frontends/shell",
+    "frontends/micro-frontends/*",
+    "services/api-gateway",
+    "shared/libraries/typescript/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup": "./scripts/setup-dev.sh",
+    "test": "npm run test:all",
+    "test:all": "./scripts/test-unit.sh",
+    "test:unit": "jest --projects=./jest.projects.js",
+    "test:integration": "./scripts/test-integration.sh",
+    "test:e2e": "cypress run",
+    "build": "./scripts/build-all.sh",
+    "build:frontend": "lerna run build --scope=@aicp/frontend-*",
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:frontend": "lerna run dev --parallel --scope=@aicp/frontend-*",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write .",
+    "docs": "./scripts/generate-docs.sh"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.13.1"
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "concurrently": "^7.6.0",
+    "cypress": "^12.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "jest": "^29.0.0",
+    "lerna": "^6.0.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
 }
