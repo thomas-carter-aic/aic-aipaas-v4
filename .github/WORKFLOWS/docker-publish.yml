@@ -1,0 +1,14 @@
+name: Docker Publish
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'apps/**/Dockerfile'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and Push
+        run: ./scripts/docker-publish.sh

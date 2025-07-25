@@ -1,0 +1,4 @@
+defaults:
+  label: "triage"
+  assignees:
+    - @thomas-carter-aic/issue-triage

@@ -1,0 +1,299 @@
+.
+├── apps
+│   ├── ai-ml
+│   │   ├── model-inference
+│   │   │   └── src
+│   │   └── model-training
+│   │       └── src
+│   ├── backend-services
+│   │   ├── go
+│   │   │   └── example-service
+│   │   │       ├── api
+│   │   │       │   ├── openapi
+│   │   │       │   └── proto
+│   │   │       ├── cmd
+│   │   │       ├── internal
+│   │   │       │   ├── config
+│   │   │       │   ├── domain
+│   │   │       │   ├── handler
+│   │   │       │   ├── repository
+│   │   │       │   └── service
+│   │   │       ├── pkg
+│   │   │       │   └── logger
+│   │   │       └── test
+│   │   │           └── integration
+│   │   ├── java
+│   │   │   ├── api-gateway
+│   │   │   │   └── src
+│   │   │   ├── buildSrc
+│   │   │   │   └── src
+│   │   │   │       └── main
+│   │   │   │           └── kotlin
+│   │   │   ├── common
+│   │   │   │   ├── core-utils
+│   │   │   │   ├── domain-model
+│   │   │   │   └── web-staarter
+│   │   │   ├── common-libs
+│   │   │   │   └── logging-utils
+│   │   │   ├── config-server
+│   │   │   │   └── src
+│   │   │   ├── discovery-server
+│   │   │   │   └── src
+│   │   │   ├── gradle
+│   │   │   │   └── wrapper
+│   │   │   └── services
+│   │   │       ├── inventory-service
+│   │   │       ├── order-service
+│   │   │       ├── payment-service
+│   │   │       └── user-service
+│   │   │           └── src
+│   │   │               ├── main
+│   │   │               │   ├── java
+│   │   │               │   │   └── com
+│   │   │               │   │       └── aic
+│   │   │               │   │           └── aipaas
+│   │   │               │   │               └── user
+│   │   │               │   │                   ├── config
+│   │   │               │   │                   ├── controller
+│   │   │               │   │                   ├── domain
+│   │   │               │   │                   ├── repository
+│   │   │               │   │                   └── service
+│   │   │               │   └── test
+│   │   │               └── resources
+│   │   ├── python
+│   │   │   └── example-service
+│   │   │       ├── src
+│   │   │       │   ├── api
+│   │   │       │   ├── models
+│   │   │       │   └── services
+│   │   │       └── tests
+│   │   └── rust
+│   ├── frontend
+│   │   ├── mf-admin
+│   │   │   ├── public
+│   │   │   └── src
+│   │   │       ├── components
+│   │   │       ├── hooks
+│   │   │       ├── pages
+│   │   │       └── styles
+│   │   ├── mf-dashboard
+│   │   │   └── src
+│   │   │       ├── components
+│   │   │       ├── hooks
+│   │   │       ├── pages
+│   │   │       └── styles
+│   │   ├── mf-home
+│   │   │   └── src
+│   │   │       ├── components
+│   │   │       ├── hooks
+│   │   │       ├── pages
+│   │   │       └── styles
+│   │   ├── shared
+│   │   │   ├── components
+│   │   │   ├── hooks
+│   │   │   ├── types
+│   │   │   └── utils
+│   │   └── shell
+│   │       └── src
+│   │           ├── components
+│   │           ├── hooks
+│   │           ├── pages
+│   │           └── styles
+│   └── serverless
+│       ├── common
+│       │   ├── layers
+│       │   └── utils
+│       │       ├── auth
+│       │       ├── logging
+│       │       └── monitoring
+│       ├── config
+│       ├── plugins
+│       ├── scripts
+│       ├── services
+│       │   ├── task-service
+│       │   │   ├── events
+│       │   │   ├── functions
+│       │   │   ├── models
+│       │   │   └── tests
+│       │   └── user-service
+│       │       ├── events
+│       │       ├── functions
+│       │       ├── models
+│       │       └── tests
+│       └── templates
+├── BUILD.bazel
+├── config
+│   ├── environments
+│   │   ├── dev
+│   │   ├── prod
+│   │   ├── stg
+│   │   └── test
+│   ├── helm
+│   ├── infra
+│   ├── kustomize
+│   │   └── base
+│   ├── lint
+│   ├── otel
+│   └── secrets
+├── Dockerfile
+├── docs
+│   ├── adrs
+│   ├── agents
+│   ├── api
+│   ├── architecture
+│   ├── artifacts
+│   ├── changelogs
+│   ├── design
+│   ├── development
+│   ├── guides
+│   ├── notes
+│   ├── observability
+│   ├── references
+│   └── tenants
+├── domains
+│   ├── agent_execution
+│   ├── common
+│   ├── tenant_management
+│   └── user
+├── events
+│   ├── envelopes
+│   ├── schemas
+│   └── serde
+├── examples
+├── infra
+│   ├── cicd
+│   │   ├── argo-cd
+│   │   ├── circle-ci
+│   │   ├── github-actions
+│   │   ├── gitlaab-ci
+│   │   ├── jenkins
+│   │   ├── tekton
+│   │   └── travis
+│   ├── contracts
+│   │   ├── pact-broker
+│   │   ├── schema-registry
+│   │   └── wiremock
+│   ├── docker-compose
+│   ├── helm
+│   │   ├── agent-service
+│   │   ├── base
+│   │   ├── gateway
+│   │   ├── prompt-runner
+│   │   └── user-service
+│   ├── iam
+│   │   ├── bindings
+│   │   ├── policies
+│   │   └── roles
+│   ├── kubernetes
+│   ├── kustomize
+│   │   ├── base
+│   │   ├── dev
+│   │   ├── prod
+│   │   └── staging
+│   ├── local-dev
+│   │   └── seed-data
+│   ├── observability
+│   │   ├── grafana
+│   │   ├── loki
+│   │   ├── otel-collector
+│   │   └── prometheus
+│   ├── scripts
+│   └── terraform
+│       ├── backend-config
+│       ├── environments
+│       │   ├── dev
+│       │   ├── prod
+│       │   ├── staging
+│       │   └── testing
+│       ├── modules
+│       └── tfvars-templates
+├── libs
+│   ├── go-commons
+│   │   ├── auth
+│   │   ├── config
+│   │   ├── http
+│   │   ├── log
+│   │   ├── otel
+│   │   ├── tracing
+│   │   └── validation
+│   ├── java-commons
+│   │   └── src
+│   │       └── main
+│   │           └── java
+│   │               └── com
+│   │                   └── aic
+│   │                       └── aipaas
+│   │                           ├── auth
+│   │                           ├── config
+│   │                           ├── domain
+│   │                           ├── eventing
+│   │                           ├── exceptions
+│   │                           ├── observability
+│   │                           ├── otel
+│   │                           └── tracing
+│   ├── python-commons
+│   │   ├── aic_common
+│   │   │   ├── auth
+│   │   │   ├── lang
+│   │   │   ├── logging
+│   │   │   ├── otel
+│   │   │   ├── schemas
+│   │   │   └── telemetry
+│   │   └── tests
+│   ├── rust-commons
+│   │   └── src
+│   ├── shared-schemas
+│   └── ts-commons
+│       └── src
+│           ├── api
+│           ├── auth
+│           ├── config
+│           ├── domaain
+│           ├── otel
+│           └── telemetry
+├── Makefile
+├── openapi
+│   └── components
+├── package.json
+├── packages
+│   ├── agent-ui-kit
+│   ├── aic-platform-client
+│   ├── eslint-plugin-org-rules
+│   ├── go-cli
+│   ├── lang-en
+│   ├── mock-llm
+│   ├── node-sdk
+│   ├── openai-wrapper
+│   ├── python-client
+│   ├── react-components
+│   ├── shared-gh-actions
+│   ├── test-utils
+│   ├── translations
+│   └── vite-plugin-telemetry
+├── proto
+│   ├── agents
+│   ├── common
+│   ├── events
+│   ├── tasks
+│   └── users
+├── README.md
+├── tests
+│   ├── contract
+│   ├── e2e
+│   ├── integration
+│   ├── mocks
+│   ├── testdata
+│   └── unit
+├── tools
+│   ├── bazel
+│   ├── ci
+│   ├── docker
+│   ├── gradle
+│   ├── linters
+│   ├── pants
+│   ├── scripts
+│   ├── tilt
+│   └── tool-versions
+└── tree.txt
+
+291 directories, 6 files

@@ -1,0 +1,20 @@
+<type>(scope): <short summary>
+
+[optional body explaining what and why, context, links, etc.]
+
+BREAKING CHANGE: [optional breaking change description]
+
+# Commit Types:
+# feat:     A new feature
+# fix:      A bug fix
+# docs:     Documentation only changes
+# style:    Changes that do not affect meaning (formatting)
+# refactor: Code change that neither fixes a bug nor adds a feature
+# perf:     A code change that improves performance
+# test:     Adding or fixing tests
+# build:    Changes to CI/CD, build tools, scripts
+# chore:    Maintenance tasks (e.g., updating deps)
+# revert:   Reverts a previous commit
+#
+# Example:
+# feat(agent): add domain event publishing logic

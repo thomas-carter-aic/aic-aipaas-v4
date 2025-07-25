@@ -1,0 +1,14 @@
+# Global owners
+*       @thomas-carter-aic/dev-leads
+
+# Frontend microfrontend ownership
+/apps/frontend/shell/     @frontend-team
+/apps/frontend/mf-*/      @frontend-team
+
+# Backend services
+/apps/backend-services/java/services/user-service/   @backend-java
+/apps/backend-services/python/                       @backend-py
+
+# Infra
+/infra/terraform/        @platform-team
+/.github/                @devops-team

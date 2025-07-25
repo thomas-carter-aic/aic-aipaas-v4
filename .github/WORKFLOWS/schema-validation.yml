@@ -1,0 +1,17 @@
+name: Schema Validation
+on:
+  pull_request:
+    paths:
+      - 'openapi/**'
+      - 'proto/**'
+      - 'events/schemas/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate OpenAPI
+        run: ./scripts/validate-openapi.sh
+      - name: Validate Protobuf
+        run: ./scripts/validate-proto.sh
